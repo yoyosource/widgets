@@ -33,7 +33,7 @@ function cropImage(img,rect) {
   let draw = new DrawContext()
   draw.size = new Size(rect.width, rect.height)
   
-  draw.drawImageAtPoint(img,new Point(-rect.x, -rect.y))
+  draw.drawImageAtPoint(img,new Point(-rect.x-1, -rect.y-3))
   return draw.getImage()
 }
 
