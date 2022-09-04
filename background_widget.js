@@ -35,7 +35,7 @@ function cropImage(img,rect) {
   
   // draw.drawImageAtPoint(img,new Point(-rect.x - (img.width - 828) / 2, -rect.y - (img.height - 1792) / 2))  
   // draw.drawImageAtPoint(img,new Point(-rect.x, -rect.y))
-  draw.drawImageAtPoint(img,new Point((img.width / 2 - 828 / 2) - rect.x, (img.height / 2 - 1792 / 2) - rect.y))
+  draw.drawImageAtPoint(img,new Point(-rect.x - (img.width / 2 - 828 / 2), -rect.y - (img.height / 2 - 1792 / 2)))
   return draw.getImage()
 }
 
