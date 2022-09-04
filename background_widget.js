@@ -4,7 +4,7 @@ var type = "top-left"
 // ---- CODE ----
 const fm = FileManager.local()
 
-if (config.runsInActionExtension) {
+if (!config.runsInWidget) {
   const sizes = {
     size: 310,
     left: 46,
