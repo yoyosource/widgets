@@ -1,3 +1,8 @@
+// ---- Links ----
+// https://docs.scriptable.app/
+// https://gist.github.com/mzeryck/3a97ccd1e059b3afa3c6666d27a496c9
+// https://github.com/mzeryck/Widget-Blur
+
 // ---- Config ----
 var type = "top-left"
 
