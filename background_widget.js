@@ -25,7 +25,6 @@ if (!config.runsInWidget) {
 
   let image = cropImage(args.images[0], new Rect(crop.x,crop.y,crop.w,crop.h))
   fm.writeImage(fm.joinPath(fm.documentsDirectory(), type + ".png"), image)
-  Script.complete()
 }
 
 // Crop an image into the specified rect.
@@ -35,7 +34,8 @@ function cropImage(img,rect) {
   draw.size = new Size(rect.width, rect.height)
   
   // draw.drawImageAtPoint(img,new Point(-rect.x - (img.width - 828) / 2, -rect.y - (img.height - 1792) / 2))  
-  draw.drawImageAtPoint(img,new Point(-rect.x, -rect.y))
+  // draw.drawImageAtPoint(img,new Point(-rect.x, -rect.y))
+  draw.drawImageAtPoint(img,new Point((img.width / 2 - 828 / 2) - rect.x, (img.height / 2 - 1792 / 2) - rect.y))
   return draw.getImage()
 }
 
