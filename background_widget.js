@@ -24,7 +24,7 @@ if (config.runsInActionExtension) {
 
   let image = cropImage(args.images[0], new Rect(crop.x,crop.y,crop.w,crop.h))
   fm.writeImage(fm.joinPath(fm.documentsDirectory(), type + ".png"), image)
-  return
+  Script.complete()
 }
 
 // Crop an image into the specified rect.
@@ -41,3 +41,4 @@ function cropImage(img,rect) {
 let widget = new ListWidget()
 widget.backgroundImage = fm.readImage(fm.joinPath(fm.documentsDirectory(), type + ".png"))
 Script.setWidget(widget)
+Script.complete()
