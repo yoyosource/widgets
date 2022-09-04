@@ -4,7 +4,7 @@ var type = "top-left"
 // ---- CODE ----
 const fm = FileManager.local()
 
-if (!config.runsInWidget) {
+if (!config.runsInWidget && !config.runsInApp) {
   // 1792 * 828
   const sizes = {
     small:  338,
