@@ -20,7 +20,7 @@ if (!config.runsInWidget) {
 
   let keys = type.split("-")
   crop.y = sizes[keys[0]]
-  crop.x = sites[keys[1]]
+  crop.x = sizes[keys[1]]
 
   let image = cropImage(args.images[0], new Rect(crop.x,crop.y,crop.w,crop.h))
   fm.writeImage(fm.joinPath(fm.documentsDirectory(), type + ".png"), image)
